@@ -4,7 +4,9 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    window.ReactNativeWebView.postMessage("Hello React Native!");
+    if (window.ReactNativeWebView) {
+      window.ReactNativeWebView.postMessage("Hello React Native!");
+    }
   })
   return (
     <div className="App">
