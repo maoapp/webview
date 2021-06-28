@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    window.ReactNativeWebView.postMessage("Hello React Native!");
+  })
   return (
     <div className="App">
       <header className="App-header">
